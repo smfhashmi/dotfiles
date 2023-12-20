@@ -9,6 +9,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 " TODO: Move these settings to: Plug 'minhajuddin/vimsettings'
 colorscheme molokai
+let g:molokai_transparent = 1
 
 " settings for gvim
 if has("gui_running")
@@ -27,8 +28,8 @@ if !has("gui_running")
 endif
 
 let loaded_matchparen=1 " don't automatically highlight the matching parens
-let mapleader      = ' '
-let maplocalleader = ' '
+let mapleader      = "\<Space>"
+let maplocalleader = "\<Space>"
 let g:auto_save = 1  " enable AutoSave on Vim startup
 set autowriteall " autosave files
 set background=dark
@@ -120,12 +121,13 @@ let g:bufferline_rotate = 2
 
 " help vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'laederon'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_inactive_collapse= 0
 
 let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 
 let g:airline#extensions#default#section_truncate_width = {
       \ 'a': 40,
@@ -209,6 +211,10 @@ set rtp+=~/.config/nvim/plugged/YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.config/nvim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_global_ycm_extra_conf'
 let g:ycm_filetype_blacklist = {'typescript': 1}
 let g:ycm_filetype_whitelist = {'typescriptreact': 1}
+
+"let g:coc_global_extensions = [
+"     \ 'coc-tsserver',
+"      \]
 " To trace gutentags issues
 " let g:gutentags_trace = 1
 autocmd BufWritePre *.py execute ':Black'
