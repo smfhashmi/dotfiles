@@ -54,7 +54,7 @@ Plug 'slashmili/alchemist.vim'
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'majutsushi/tagbar'
 Plug 'tveskag/nvim-blame-line'
-
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 " Language plugs
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

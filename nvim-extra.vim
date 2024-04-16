@@ -28,8 +28,8 @@ if !has("gui_running")
 endif
 
 let loaded_matchparen=1 " don't automatically highlight the matching parens
-let mapleader      = "\<Space>"
-let maplocalleader = "\<Space>"
+let mapleader      = ","
+let maplocalleader = ","
 let g:auto_save = 1  " enable AutoSave on Vim startup
 set autowriteall " autosave files
 set background=dark
@@ -197,9 +197,6 @@ nmap     <C-F>f <Plug>CtrlSFPrompt
 nmap     <C-F>n <Plug>CtrlSFCwordPath
 nmap     <C-F>p <Plug>CtrlSFPwordPath
 
-"switch between opened files
-nnoremap <C-Tab> :bn<CR>
-nnoremap <C-S-Tab> :bp<CR>
 
 "prettier plugin configuration
 nmap <Leader>py <Plug>(Prettier)
@@ -219,3 +216,14 @@ let g:ycm_filetype_whitelist = {'typescriptreact': 1}
 " let g:gutentags_trace = 1
 autocmd BufWritePre *.py execute ':Black'
 
+" enable blame line
+autocmd BufEnter * EnableBlameLine
+
+" ctrl-p show hidden files
+let g:ctrlp_show_hidden = 1
+
+" Enable coc.nvim
+autocmd FileType * silent! call CocStart()
+
+" key mapping for hover information
+nmap <silent> <F2> :call CocAction('doHover')<CR>
