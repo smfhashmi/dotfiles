@@ -227,3 +227,8 @@ autocmd FileType * silent! call CocStart()
 
 " key mapping for hover information
 nmap <silent> <F2> :call CocAction('doHover')<CR>
+
+" Enable emmet-vim
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key='<C-y>'
+autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,typescriptreact EmmetInstall
