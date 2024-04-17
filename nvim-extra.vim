@@ -8,8 +8,18 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "		VIM SETTINGS
 " >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 " TODO: Move these settings to: Plug 'minhajuddin/vimsettings'
-colorscheme molokai
-let g:molokai_transparent = 1
+
+" colorscheme
+" colorscheme molokai
+" let g:molokai_transparent = 1
+"
+
+
+
+set background=dark
+let g:everforest_background = 'soft'
+let g:everforest_better_performance = 1
+colorscheme everforest
 
 " settings for gvim
 if has("gui_running")
@@ -121,7 +131,7 @@ let g:bufferline_rotate = 2
 
 " help vim-airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'laederon'
+let g:airline_theme = 'everforest'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_inactive_collapse= 0

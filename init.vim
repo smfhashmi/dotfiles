@@ -15,7 +15,7 @@ Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 Plug 'Keithbsmiley/investigate.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'matchit.zip'
+Plug 'vim-scripts/matchit.zip'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree' " file browser
@@ -23,6 +23,7 @@ Plug 'scrooloose/syntastic'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tomasr/molokai' " colorscheme
+Plug 'sainnhe/everforest'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-dispatch' " async command execution
 Plug 'tpope/vim-endwise'
