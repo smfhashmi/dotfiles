@@ -18,7 +18,7 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'vim-scripts/matchit.zip'
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree' " file browser
+Plug 'preservim/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -71,6 +71,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown' }
 Plug 'slim-template/vim-slim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-haml'

@@ -14,8 +14,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " let g:molokai_transparent = 1
 "
 
-
-
 set background=dark
 let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
@@ -38,9 +36,9 @@ if !has("gui_running")
 endif
 
 let loaded_matchparen=1 " don't automatically highlight the matching parens
-let mapleader      = ","
-let maplocalleader = ","
-let g:auto_save = 1  " enable AutoSave on Vim startup
+let mapleader=","
+let maplocalleader=","
+let g:auto_save=1  " enable AutoSave on Vim startup
 set autowriteall " autosave files
 set background=dark
 set clipboard=unnamedplus " Yanks go on clipboard
@@ -117,6 +115,9 @@ let NERDTreeShowHidden=1 " Shows dot files of the project in the nerd tree
 
 let g:NERDShutUp = 1 " disable warnings from NERDCommenter
 
+"NerdTree Toggle
+map <C-n> :NERDTreeToggle<CR>
+
 " ultisnips
 let g:UltiSnipsExpandTrigger="<C-o>"
 "let g:UltiSnipsJumpForwardTrigger="<C-n>"
@@ -152,7 +153,7 @@ let g:airline#extensions#default#section_truncate_width = {
 let g:airline_section_z = '%3v' " just show the column number instead of %, linenr and the linenr symbol
 let g:airline#extensions#default#section_truncate_width = {}
 
-" rainbow parans
+" rainbow params
 let g:rbpt_colorpairs = [
       \ ['brown',       'RoyalBlue3'],
       \ ['Darkblue',    'SeaGreen3'],
@@ -193,8 +194,6 @@ let g:syntastic_check_on_wq = 0
 let g:indentLine_char = '│'
 let g:indentLine_color_gui = '#333333'
 
-"NerdTree Toggle
-map <C-n> :NERDTreeToggle<CR>
 
 "mapping the splits between the panes
 nnoremap gh <C-W><C-H>
@@ -242,3 +241,9 @@ nmap <silent> <F2> :call CocAction('doHover')<CR>
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-y>'
 autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,typescriptreact EmmetInstall
+
+" codeium disable
+let g:codeium_disable_bindings = 1
+
+" Toggle Markdown Preview window
+nnoremap <C-m> :MarkdownPreviewToggle<CR>
