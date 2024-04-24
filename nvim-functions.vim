@@ -119,7 +119,7 @@ nnoremap <leader>z <Plug>ZVMotion
 
 
 " Key mapping to trigger fzf search for methods
-nnoremap <C-F> :call FzfSearchMethods()<CR>
+nnoremap <A-F> :call FzfSearchMethods()<CR>
 
 " Function to perform fzf search for methods
 function! FzfSearchMethods()

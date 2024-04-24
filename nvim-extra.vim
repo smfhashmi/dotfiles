@@ -140,6 +140,12 @@ let g:airline_inactive_collapse= 0
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 
+" Enable the tabline extension
+let g:airline#extensions#tabline#enabled = 1
+
+" Customize the tabline formatter to highlight the active tab
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
 let g:airline#extensions#default#section_truncate_width = {
       \ 'a': 40,
       \ 'b': 80,
@@ -245,5 +251,3 @@ autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,typescriptreact
 " codeium disable
 let g:codeium_disable_bindings = 1
 
-" Toggle Markdown Preview window
-nnoremap <C-m> :MarkdownPreviewToggle<CR>
