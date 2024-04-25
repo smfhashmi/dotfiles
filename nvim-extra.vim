@@ -118,6 +118,9 @@ let g:NERDShutUp = 1 " disable warnings from NERDCommenter
 "NerdTree Toggle
 map <C-n> :NERDTreeToggle<CR>
 
+let g:NERDTreeWinSize = 30
+
+
 " ultisnips
 let g:UltiSnipsExpandTrigger="<C-o>"
 "let g:UltiSnipsJumpForwardTrigger="<C-n>"
@@ -250,4 +253,3 @@ autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,typescriptreact
 
 " codeium disable
 let g:codeium_disable_bindings = 1
-
