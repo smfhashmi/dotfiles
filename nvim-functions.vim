@@ -115,28 +115,3 @@ let g:markdown_fenced_languages = []
 let g:markdown_fenced_languages = ['bash=sh', 'css', 'elixir', 'erb=eruby', 'go', 'html', 'javascript', 'typescript', 'ts=typescript', 'js=javascript', 'json=javascript', 'python', 'ruby', 'sql', 'vim']
 
 nnoremap <leader>z <Plug>ZVMotion
-
-
-
-" Key mapping to trigger fzf search for methods
-nnoremap <A-F> :call FzfSearchMethods()<CR>
-
-" Function to perform fzf search for methods
-function! FzfSearchMethods()
-    let cmd = "ctags -R --fields=+n -f - . | cut -f1"
-    let choice = fzf#run({
-        \ 'source': cmd,
-        \ 'sink': 1,
-        \ 'options': '--ansi',
-        \ 'down': '40%',
-        \ 'header': 'Select a method:',
-        \ 'expect': 'ctrl-t',
-        \ })
-    if choice != ''
-        let parts = split(choice, '\t')
-        let filename = parts[0]
-        let lineNumber = str2nr(parts[1])
-        execute 'edit ' . filename
-        call cursor(lineNumber, 0)
-    endif
-endfunction
