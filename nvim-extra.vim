@@ -118,7 +118,7 @@ let g:NERDShutUp = 1 " disable warnings from NERDCommenter
 "NerdTree Toggle
 map <C-n> :NERDTreeToggle<CR>
 
-let g:NERDTreeWinSize = 30
+"let g:NERDTreeWinSize = 30
 
 
 " ultisnips
@@ -145,9 +145,6 @@ let g:airline#extensions#branch#enabled = 1
 
 " Enable the tabline extension
 let g:airline#extensions#tabline#enabled = 1
-
-" Customize the tabline formatter to highlight the active tab
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 let g:airline#extensions#default#section_truncate_width = {
       \ 'a': 40,
@@ -249,7 +246,7 @@ nmap <silent> <F2> :call CocAction('doHover')<CR>
 " Enable emmet-vim
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-y>'
-autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,typescriptreact EmmetInstall
+autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,typescript,react EmmetInstall
 
 " codeium disable
 let g:codeium_disable_bindings = 1

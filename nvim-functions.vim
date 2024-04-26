@@ -18,7 +18,7 @@ function! ToggleZoom()
   call winrestview(l:winview)
 endfunction
 
-nnoremap <S-x>xi :call ToggleZoom()<cr>
+nnoremap <leader>xi :call ToggleZoom()<cr>
 
 set nofsync
 
@@ -29,7 +29,7 @@ set nofsync
 function! OpenScratch()
   exec 'sp '. $HOME . '/.scratch/'. split(getcwd(), '/')[-1]
 endfunction
-nnoremap <S-x>xx :call OpenScratch()<cr>
+nnoremap <leader>xx :call OpenScratch()<cr>
 
 " -------------Quick TODO-------------
 " Open a global quick todo file
@@ -38,7 +38,7 @@ nnoremap <S-x>xx :call OpenScratch()<cr>
 function! OpenQuickTodo()
   exec 'tabnew '. $HOME . '/quick.todo'
 endfunction
-nnoremap <S-t>xd :call OpenQuickTodo()<cr>
+nnoremap <leader>xd :call OpenQuickTodo()<cr>
 
 " -------------Ctags-------------
 " run ctags
@@ -112,6 +112,6 @@ map <leader>xT <Plug>SendFocusedTestToTmux
 " Fenced code blocks
 let g:markdown_fenced_languages = []
 
-let g:markdown_fenced_languages = ['bash=sh', 'css', 'elixir', 'erb=eruby', 'go', 'html', 'javascript', 'typescript', 'ts=typescript', 'js=javascript', 'json=javascript', 'python', 'ruby', 'sql', 'vim']
+let g:markdown_fenced_languages = ['bash=sh', 'css', 'elixir', 'erb=eruby', 'go', 'html', 'javascript', 'typescript', 'ts=typescript', 'js=javascript', 'json=javascript', 'json=typescript', 'python', 'ruby', 'sql', 'vim']
 
 nnoremap <leader>z <Plug>ZVMotion
