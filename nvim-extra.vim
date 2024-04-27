@@ -246,7 +246,7 @@ nmap <silent> <F2> :call CocAction('doHover')<CR>
 " Enable emmet-vim
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-y>'
-autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,typescript,react EmmetInstall
+autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,react,erb,haml EmmetInstall
 
 " codeium disable
 let g:codeium_disable_bindings = 1
