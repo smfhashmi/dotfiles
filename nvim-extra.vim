@@ -15,6 +15,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 "
 
 set background=dark
+set tags=./tags
 let g:everforest_background = 'soft'
 let g:everforest_better_performance = 1
 colorscheme everforest
@@ -250,3 +251,21 @@ autocmd FileType html,css,scss,xml,jsx,tsx,javascript,typescript,react,erb,haml 
 
 " codeium disable
 let g:codeium_disable_bindings = 1
+
+" coc.nvim settings
+let g:coc_global_extensions = ['coc-tag']
+
+" Set the location of your tags file
+let g:coc_tag_search_paths = ['.']
+
+" Configure key mappings for tag navigation using ALT
+nmap <silent> <M-d> :call CocActionAsync('doHover')<CR>
+nmap <silent> <M-g> :call CocActionAsync('jumpDefinition')<CR>
+nmap <silent> <M-r> :call CocActionAsync('jumpReferences')<CR>
+
+" Mapping to jump back from definition
+ nmap <silent> <M-b> <C-o>
+
+ " Automatically generate tags on file save
+autocmd BufWritePost * call system('ctags -R .')
+
