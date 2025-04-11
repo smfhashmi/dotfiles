@@ -266,6 +266,6 @@ nmap <silent> <M-r> :call CocActionAsync('jumpReferences')<CR>
 " Mapping to jump back from definition
  nmap <silent> <M-b> <C-o>
 
- " Automatically generate tags on file save
-autocmd BufWritePost * call system('ctags -R .')
+" Automatically generate tags on file save
+"autocmd BufWritePost * call system('ctags -R .')
 
